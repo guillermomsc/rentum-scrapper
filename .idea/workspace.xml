@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d4f71b-5018-457f-abf8-5c3e1691c087" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,20 +15,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/scrapper.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state relative-caret-position="378">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="306">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#3922#3923#0" expanded="true" />
+                <element signature="e#3962#3963#0" expanded="true" />
+                <element signature="e#8599#8600#0" expanded="true" />
+                <element signature="e#8640#8641#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,6 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,33 +78,23 @@
         <subPane>
           <expand>
             <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="rentum-scrapper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentum-scrapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="rentum-scrapper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentum-scrapper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="rentum-scrapper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentum-scrapper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ML_Scrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ML_Scrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="rentum-scrapper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentum-scrapper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -126,7 +125,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -199,6 +198,7 @@
       <workItem from="1597330143238" duration="598000" />
       <workItem from="1604783517633" duration="2992000" />
       <workItem from="1604791507565" duration="375000" />
+      <workItem from="1604793861753" duration="8857000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1604791148869</created>
@@ -211,20 +211,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14173000" />
+    <option name="totallyTimeSpent" value="23030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1912" height="1053" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2596774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2629032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946237" weight="0.25925925" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946237" weight="0.32996634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49892473" visible="true" weight="0.25925925" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4983871" weight="0.4006734" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -232,9 +233,9 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49892473" visible="true" weight="0.33108866" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="12" sideWeight="0.50107527" side_tool="true" visible="true" weight="0.33108866" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49784946" weight="0.332211" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5016129" side_tool="true" weight="0.39955106" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946237" weight="0.32996634" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -250,6 +251,9 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -307,17 +311,47 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>webElement.getAttribute(&quot;value&quot;);</expression-string>
+        <expression-string>ubicacion.getText();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>webElement.getText()</expression-string>
+        <expression-string>ubicacion</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>webElement</expression-string>
+        <expression-string>publicacion.findElement(By.className(&quot;ui-search-item__location&quot;)).getText();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>publicacion.findElement(By.className(&quot;ui-search-item__location&quot;));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>publicacion.findElement(By.className(&quot;ui-search-item__group__element ui-search-item__location&quot;));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>publicacion</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(ubicacion.getText()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ubicacion.getText() != null &amp;&amp; (ubicacion.getText().contains(&quot;Montevideo&quot;) || ubicacion.getText().contains(&quot;Canelones&quot;))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ubicacion.getText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -337,15 +371,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scrapper.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state relative-caret-position="378">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="306">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#3922#3923#0" expanded="true" />
+            <element signature="e#3962#3963#0" expanded="true" />
+            <element signature="e#8599#8600#0" expanded="true" />
+            <element signature="e#8640#8641#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

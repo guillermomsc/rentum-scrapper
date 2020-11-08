@@ -2,6 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,26 +20,24 @@ import java.util.stream.Collectors;
 import static java.lang.System.exit;
 
 public class Main {
-    static WebDriver driver = null;
+    private static WebDriver driver = null;
 
     public static void main(final String[] args) {
 
-       /* if (ArrayUtils.isEmpty(args) || args.length < 3) {
+        if (ArrayUtils.isEmpty(args) || args.length < 3) {
             throw new IllegalArgumentException("Faltan Argumnetos necesarios  java -jar scrapper.jar <rutaArchivo> <rutaArchivPaginmasBaneadas> <pagina> [verBrowser] ");
-        }*/
+        }
 
-        //final String filePath = args[0];
-        final String filePath = "/home/guille/Dev/scrapper.txt";
-        //final String filePathBannedIp = args[1];
-        //final int page = Integer.parseInt(args[2]);
-        final int page = 1;
+        final String filePath = args[0];
+        final String filePathBannedIp = args[1];
+        final int page = Integer.parseInt(args[2]);
+        int publish = args[3] != null ? Integer.parseInt(args[3]) : 0;
         final boolean showBrowser = args[3] == null || Boolean.parseBoolean(args[3]);
 
 
         try {
-
             final File file = new File(filePath);
-            //final File fileBannedIPPages = new File(filePathBannedIp);
+            final File fileBannedIPPages = new File(filePathBannedIp);
             driver = getWebDriver(showBrowser);
             navigateTo("https://listado.mercadolibre.com.uy/inmuebles/alquiler/dueno/");
 
@@ -52,47 +51,52 @@ public class Main {
             }
 
             System.out.println("Página=" + page);
-            int publish = 0;
             while (publish < 48) {
 
                 Thread.sleep(2000);
 
                 //Me paro en la publicacion i(publish)
-                getRealEstatesPublishesWebElement(publish).click();
+                final WebElement publicacion = getRealEstatesPublishesWebElement(publish);
 
-                //espero
-                Thread.sleep(3000);
+                if(publicacion != null){
 
-                final String barrio = getBarrio();
-                final String moneda = getMoneda();
-                final String precio = getPrecio();
-                final String cuartos = getCuartos();
-                final String url = getUrl();
+                    publicacion.click();
+
+                    //espero
+                    Thread.sleep(5000);
+
+                    final String barrio = getBarrio();
+                    final String moneda = getMoneda();
+                    final String precio = getPrecio();
+                    final String cuartos = getCuartos();
+                    final String url = getUrl();
 
 
-                //hago clic en ver teléfono
-                getShowPhoneNumberWebElement().click();
+                    //hago clic en ver teléfono
+                    final WebElement link = getShowPhoneNumberWebElement();
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", link);
 
-                //espero
-                Thread.sleep(8000);
+                    //espero
+                    Thread.sleep(8000);
 
-                //obtengo la data
-                final String phoneData = getPhoneNumbers();
+                    //obtengo la data
+                    final String phoneData = getPhoneNumbers();
 
-                if (StringUtils.isEmpty(phoneData)) {
+                    if (StringUtils.isEmpty(phoneData)) {
 
-                    final String bannedData = "IP baneada para la página " + page + " " + "en el item número " + publish;
-                    System.out.println(bannedData);
-                    //writeFile(fileBannedIPPages, bannedData);
-                    exit(1);
+                        final String bannedData = "IP baneada para la página " + page + " " + "en el item número " + publish;
+                        System.out.println(bannedData);
+                        writeFile(fileBannedIPPages, bannedData);
+                        exit(1);
+                    }
+
+                    final String resultado = StringUtils.join(Arrays.asList(phoneData, barrio, moneda.concat(precio), cuartos, url), "|");
+                    System.out.println(resultado);
+                    writeFile(file, resultado);
+                    System.out.println("\tPublicación=" + publish);
+                    navigateBack();
                 }
-
-                final String resultado = StringUtils.join(Arrays.asList(phoneData, barrio, moneda.concat(precio), cuartos, url), "|");
-                System.out.println(resultado);
-                writeFile(file, resultado);
-                System.out.println("\tPublicación=" + publish);
                 publish++;
-                navigateBack();
             }
 
             driver.quit();
@@ -124,7 +128,7 @@ public class Main {
                 .stream().map(WebElement::getText).collect(Collectors.joining(";"));
     }
 
-    private static WebDriver getWebDriver(boolean showBrowser) {
+    private static WebDriver getWebDriver(final boolean showBrowser) {
 
         WebDriverManager.chromedriver().setup();
         final ChromeOptions options = getWebDriverChromeOptions(showBrowser);
@@ -156,7 +160,15 @@ public class Main {
     }
 
     private static WebElement getRealEstatesPublishesWebElement(final int index) {
-        return driver.findElements(By.cssSelector("li.ui-search-layout__item")).get(index);
+
+        final WebElement publicacion = driver.findElements(By.cssSelector("li.ui-search-layout__item")).get(index);
+
+        final WebElement ubicacion = publicacion.findElement(By.className("ui-search-item__location"));
+        if(ubicacion.getText() != null && (ubicacion.getText().contains("Montevideo") || ubicacion.getText().contains("Canelones"))){
+            return publicacion;
+
+        }
+        return null;
     }
 
     private static String getBarrio(){
