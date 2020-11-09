@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d4f71b-5018-457f-abf8-5c3e1691c087" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="74d4f71b-5018-457f-abf8-5c3e1691c087" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="396">
+              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding>
                 <element signature="e#3922#3923#0" expanded="true" />
                 <element signature="e#3962#3963#0" expanded="true" />
@@ -198,7 +196,7 @@
       <workItem from="1597330143238" duration="598000" />
       <workItem from="1604783517633" duration="2992000" />
       <workItem from="1604791507565" duration="375000" />
-      <workItem from="1604793861753" duration="8857000" />
+      <workItem from="1604793861753" duration="10107000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1604791148869</created>
@@ -207,14 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604791148869</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="agrego filtro para publicacion de montevideo y maldonado y agrego argumento con numero de publicacion">
+      <created>1604869239755</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604869239757</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23030000" />
+    <option name="totallyTimeSpent" value="24280000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1912" height="1053" extended-state="0" />
+    <frame x="1" y="0" width="1912" height="1053" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2629032" />
@@ -224,7 +229,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946237" weight="0.32996634" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49892473" visible="true" weight="0.25925925" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892473" weight="0.25925925" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4983871" weight="0.4006734" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -255,7 +260,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="agrego filtro para publicacion de montevideo y maldonado y agrego argumento con numero de publicacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="agrego filtro para publicacion de montevideo y maldonado y agrego argumento con numero de publicacion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2475" y="201" width="800" height="684" key="#Project_Structure" />
@@ -378,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="396">
+          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding>
             <element signature="e#3922#3923#0" expanded="true" />
             <element signature="e#3962#3963#0" expanded="true" />

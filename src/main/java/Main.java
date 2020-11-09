@@ -31,9 +31,8 @@ public class Main {
         final String filePath = args[0];
         final String filePathBannedIp = args[1];
         final int page = Integer.parseInt(args[2]);
-        int publish = args[3] != null ? Integer.parseInt(args[3]) : 0;
         final boolean showBrowser = args[3] == null || Boolean.parseBoolean(args[3]);
-
+        int publish = args[4] != null ? Integer.parseInt(args[4]) : 0;
 
         try {
             final File file = new File(filePath);
