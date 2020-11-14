@@ -45,7 +45,8 @@ public class Main {
 
             int currentPage = getCurrentPageIndex();
             while (page != currentPage) {
-                getNextPageWebElement().click();
+                final WebElement nextPageWebElement = getNextPageWebElement();
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextPageWebElement);
                 currentPage = getCurrentPageIndex();
             }
 
@@ -89,7 +90,7 @@ public class Main {
                         exit(1);
                     }
 
-                    final String resultado = StringUtils.join(Arrays.asList(phoneData, barrio, moneda.concat(precio), cuartos, url), "|");
+                    final String resultado = StringUtils.join(Arrays.asList(phoneData, barrio, moneda,precio, cuartos, url), "|");
                     System.out.println(resultado);
                     writeFile(file, resultado);
                     System.out.println("\tPublicación=" + publish);
